@@ -27,7 +27,9 @@ yarn run lint
 # fixオプションあり
 yarn run lint:fix
 ```
-`pre-commit`で`lint:fix`自動実行
+`pre-push`で`lint`自動実行
+
+プッシュに失敗したら、`yarn run lints:fix`で修正して、再プッシュ
 
 ### Prettier
 ESLintと連携
@@ -40,10 +42,17 @@ yarn run sytlelint
 # fixオプションあり
 yarn run sytlelint:fix
 ```
-`pre-commit`で`sytlelint:fix`自動実行
+`pre-push`で`sytlelint`自動実行
+
+プッシュに失敗したら、`yarn run lints:fix`で修正して、再プッシュ
 
 ### editorconfig
 ESLint、Prettier、sytlelintの設定に合わせて随時調整
+
+### fix all
+```shell script
+yarn run lints:fix
+```
 
 ### ビルド & デプロイ
 ### export
