@@ -3,3 +3,4 @@ public/
 .github/
 .next/
 out/
+coverage/
