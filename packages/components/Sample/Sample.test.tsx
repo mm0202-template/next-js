@@ -9,6 +9,6 @@ describe('sandbox', () => {
         <span>success?</span>
       </Sample>
     )
-    expect(wrapper.text()).toBe('success?')
+    expect(wrapper.text()).toContain('success?')
   })
 })
