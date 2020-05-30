@@ -12,7 +12,7 @@
     "stylelint": "stylelint ./**/*.{css,scss,ts,tsx,js,jsx}",
     "stylelint:fix": "stylelint --fix ./**/*.{css,scss,ts,tsx,js,jsx}",
     "test": "jest",
-    "test-coverage": "jest --coverage"
+    "test:coverage": "jest --coverage"
   },
   "husky": {
     "hooks": {

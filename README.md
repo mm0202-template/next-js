@@ -1,4 +1,66 @@
-# TypeScript Next.js example
+# Next.js Template
+## 構成
+### ベース
+[TypeScript Next.js example](https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
+
+### プロジェクトルート
+`~`をプロジェクトルートに設定。
+
+※ `tsconfig.json`と`jest.config.json`で指定
+
+## テスト
+### Jest
+```shell script
+# カバレッジなし
+yarn run test
+
+# カバレッジあり
+yarn run test:coverage
+```
+
+## フォーマット
+### ESLint
+```shell script
+# fixオプションなし
+yarn run lint
+
+# fixオプションあり
+yarn run lint:fix
+```
+`pre-commit`で`lint:fix`自動実行
+
+### Prettier
+ESLintと連携
+
+### sytlelint
+```shell script
+# fixオプションなし
+yarn run sytlelint
+
+# fixオプションあり
+yarn run sytlelint:fix
+```
+`pre-commit`で`sytlelint:fix`自動実行
+
+### editorconfig
+ESLint、Prettier、sytlelintの設定に合わせて随時調整
+
+### ビルド & デプロイ
+### export
+```shell script
+yarn run build
+yarn run export
+```
+
+### Netlify公開用のビルドワークフロー
+詳細は以下の記事参照
+
+[Netlify 向けデプロイテンプレートの中身を解説！](https://mmll.hatenablog.com/entry/category/services/netlify/template-deploy-to-netlify-source-code)
+
+※ ビルド工程など、上記の記事から一部調整
+
+
+# README from TypeScript Next.js example
 
 This is a really simple project that shows the usage of Next.js with TypeScript.
 
