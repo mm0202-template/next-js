@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '@material-ui/core'
+import StyledButton from '~/packages/components/Sample/StyledButton'
 
 type Props = {
   children: React.ReactElement | string
@@ -7,9 +8,14 @@ type Props = {
 
 export default function Sample(props: Props): React.ReactElement {
   return (
-    <div>
-      <div>{props.children}</div>
-      <Button variant="contained">Default</Button>
-    </div>
+    <ul>
+      <li>
+        styled-components sample : <StyledButton />
+      </li>
+      <li>
+        material-ui sample : <Button variant="contained">Default</Button>
+      </li>
+      <li>{props.children}</li>
+    </ul>
   )
 }
