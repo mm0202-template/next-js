@@ -11,12 +11,13 @@
     "lint:fix": "eslint ./**/*.{js,ts,jsx,tsx} --fix",
     "stylelint": "stylelint ./**/*.{css,scss,ts,tsx,js,jsx}",
     "stylelint:fix": "stylelint --fix ./**/*.{css,scss,ts,tsx,js,jsx}",
+    "lints:fix": "yarn run lint:fix && yarn run stylelint:fix",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint:fix && yarn run stylelint:fix"
+      "pre-push": "yarn run lint && yarn run stylelint"
     }
   },
   "dependencies": {
