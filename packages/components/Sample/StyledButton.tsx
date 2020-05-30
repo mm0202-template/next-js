@@ -5,8 +5,8 @@ export default styled.a`
   padding: 1em 2em;
   text-decoration: none;
   background: #f7f7f7;
-  border-left: solid 6px #ff7c5c; /*左線*/
-  color: #ff7c5c; /*文字色*/
+  border-left: solid 6px #ff7c5c; /* 左線 */
+  color: #ff7c5c; /* 文字色 */
   font-weight: bold;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.29);
   &:active {
