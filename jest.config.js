@@ -5,7 +5,7 @@ module.exports = {
   testPathIgnorePatterns: ['.bk'],
   globals: {
     'ts-jest': {
-      tsConfig: 'tsconfig.test.json',
+      tsConfig: 'jest.tsconfig.json',
     },
   },
   moduleNameMapper: {
