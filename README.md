@@ -8,6 +8,10 @@
 
 ※ `tsconfig.json`と`jest.config.json`で指定
 
+### 環境変数
+* [Environment Variables | Next.js](https://nextjs.org/docs/basic-features/environment-variables)
+* [解説ページ(準備中)]()
+
 ## テスト
 ### Jest
 ```shell script
