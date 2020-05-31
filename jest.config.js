@@ -2,7 +2,7 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   setupFiles: ['./jest.setup.ts'],
-  testPathIgnorePatterns: ['.bk'],
+  testPathIgnorePatterns: ['.bk', 'cypress'],
   globals: {
     'ts-jest': {
       tsConfig: 'jest.tsconfig.json',

@@ -4,3 +4,4 @@ public/
 .next/
 out/
 coverage/
+cypress/integration/examples
