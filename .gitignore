@@ -9,6 +9,10 @@
 .env.production
 .env.production.local
 
+cypress/integration/examples
+cypress/fixtures/example.json
+cypress/videos/
+
 # Logs
 logs
 *.log
