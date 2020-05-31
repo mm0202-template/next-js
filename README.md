@@ -54,7 +54,7 @@ ESLint、Prettier、sytlelintの設定に合わせて随時調整
 yarn run lints:fix
 ```
 
-### ビルド & デプロイ
+## ビルド & デプロイ
 ### export
 ```shell script
 yarn run build
@@ -67,6 +67,14 @@ yarn run export
 [Netlify 向けデプロイテンプレートの中身を解説！](https://mmll.hatenablog.com/entry/category/services/netlify/template-deploy-to-netlify-source-code)
 
 ※ ビルド工程など、上記の記事から一部調整
+
+## ログ
+### Sentry
+環境変数`NEXT_PUBLIC_SENTRY_DSN`に対象SentryプロジェクトのDSNの値を設定。
+
+ローカル環境なら`.env.development.local`などで定義。
+
+デプロイ環境ならSecretで定義。
 
 
 # README from TypeScript Next.js example
