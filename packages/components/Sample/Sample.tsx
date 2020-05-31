@@ -9,6 +9,7 @@ type Props = {
 export default function Sample(props: Props): React.ReactElement {
   return (
     <ul>
+      <li className={'for-cypress-check'}>Cypress is good!!</li>
       <li>
         styled-components sample : <StyledButton />
       </li>
