@@ -114,9 +114,9 @@ yarn export
 ### Sentry
 環境変数`NEXT_PUBLIC_SENTRY_DSN`に対象SentryプロジェクトのDSNの値を設定。
 
-ローカル環境なら`.env.development.local`などで定義。
+ローカル環境では`.env.development.local`などで定義。
 
-デプロイ環境ならSecretで定義。
+デプロイ環境では、Secretなどで定義。
 
 
 # README from TypeScript Next.js example
