@@ -45,7 +45,7 @@ jobs:
       - run: yarn build
         env:
           NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
-
+          GTM_CONTAINER_ID: ${{ secrets.GTM_CONTAINER_ID }}
 
       - run: yarn export
 
