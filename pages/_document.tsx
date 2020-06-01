@@ -20,7 +20,7 @@ class MyDocument extends Document {
     // noinspection HtmlRequiredTitleElement
     return (
       <Html>
-        <Head title={'title'} />
+        <Head />
         <body>
           <Main />
           <NextScript />
