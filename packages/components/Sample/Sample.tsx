@@ -9,6 +9,15 @@ type Props = {
 export default function Sample(props: Props): React.ReactElement {
   return (
     <ul>
+      <li>
+        <button
+          onClick={() => {
+            throw new Error('date: ' + new Date().toLocaleString())
+          }}
+        >
+          for sentry check
+        </button>
+      </li>
       <li className={'for-cypress-check'}>Cypress is good!!</li>
       <li>
         styled-components sample : <StyledButton />
