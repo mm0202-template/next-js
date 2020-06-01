@@ -14,6 +14,13 @@
 * [【Next.js】環境変数(.env)の使い方【公式ドキュメント 意訳】](https://mmll.hatenablog.com/entry/category/tools/next-js/next-js-env-usage)
 * [Environment Variables | Next.js](https://nextjs.org/docs/basic-features/environment-variables)
 
+### Googleタグマネージャー
+環境変数`GTM_CONTAINER_ID`に対象コンテナのコンテナIDを設定
+
+ローカル環境では`.env.development.local`などで定義。
+
+デプロイ環境では、Secretなどで定義。
+
 ### デプロイ設定
 #### Cypressを使用する場合
 ##### レコード機能を使用する場合
