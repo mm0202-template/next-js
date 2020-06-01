@@ -42,10 +42,10 @@
 ### Jest
 ```shell script
 # カバレッジなし
-yarn run test
+yarn test
 
 # カバレッジあり
-yarn run test:coverage
+yarn test:coverage
 ```
 
 ### Cypress
@@ -64,43 +64,43 @@ yarn cypress run
 ### ESLint
 ```shell script
 # fixオプションなし
-yarn run lint
+yarn lint
 
 # fixオプションあり
-yarn run lint:fix
+yarn lint:fix
 ```
 `pre-push`で`lint`自動実行
 
-プッシュに失敗したら、`yarn run lints:fix`で修正して、再プッシュ
+プッシュに失敗したら、`yarn lints:fix`で修正して、再プッシュ
 
 ### Prettier
 ESLintと連携
 
-### sytlelint
+### stylelint
 ```shell script
 # fixオプションなし
-yarn run sytlelint
+yarn stylelint
 
 # fixオプションあり
-yarn run sytlelint:fix
+yarn stylelint:fix
 ```
 `pre-push`で`sytlelint`自動実行
 
-プッシュに失敗したら、`yarn run lints:fix`で修正して、再プッシュ
+プッシュに失敗したら、`yarn lints:fix`で修正して、再プッシュ
 
 ### editorconfig
 ESLint、Prettier、sytlelintの設定に合わせて随時調整
 
 ### fix all
 ```shell script
-yarn run lints:fix
+yarn lints:fix
 ```
 
 ## ビルド & デプロイ
 ### export
 ```shell script
-yarn run build
-yarn run export
+yarn build
+yarn export
 ```
 
 ### Netlify公開用のビルドワークフロー
