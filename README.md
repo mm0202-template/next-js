@@ -12,6 +12,30 @@
 * [Environment Variables | Next.js](https://nextjs.org/docs/basic-features/environment-variables)
 * [解説ページ(準備中)]()
 
+### デプロイ設定
+#### Cypressを使用する場合
+##### レコード機能を使用する場合
+`GitHubリポジトリページ > Settings > Secrets`で、以下の２つのsecretを追加してください。
+
+* `CYPRESS_PROJECT_ID`
+* `CYPRESS_RECORD_KEY`
+
+「Project ID」と「Record Key」は `Cypress ダッシュボード > 対象プロジェクト > Project settings` から取得可能。
+
+`cypress.json` で `projectID` を設定している場合はテストランナーの Settings ページからも確認可能。
+
+より詳細な内容は以下参照。
+
+[公式ドキュメント Projects#Identification](https://docs.cypress.io/guides/dashboard/projects.html#Identification)
+
+##### レコード機能を使用しない場合
+各ワークフローのcypress使用部分から、`--record`フラグを削除してください。
+
+※ 2020/06/01時点では、`staging`と`production`ワークフローで`--record`フラグを使用。
+
+#### Cypressを使用しない場合
+各ワークフローから、cypress使用部分をコメントアウト、または削除してください。
+
 ## テスト
 ### Jest
 ```shell script
@@ -21,6 +45,18 @@ yarn run test
 # カバレッジあり
 yarn run test:coverage
 ```
+
+### Cypress
+```shell script
+# テストランナーの起動
+yarn cypress:open
+
+# テストの実行
+yarn cypress run
+```
+
+※ テスト実施前にアプリの起動が必要です。
+
 
 ## フォーマット
 ### ESLint
