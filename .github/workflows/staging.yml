@@ -31,7 +31,22 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - run: yarn install --frozen-lockfile
+
+      - run: yarn test
+
+      - run: yarn dev &
+      - name: 起動待機...
+        run: sleep 5
+      - run: yarn cypress run -C cypress.ci.json --record
+        env:
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
       - run: yarn build
+        env:
+          NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
+          GTM_CONTAINER_ID: ${{ secrets.GTM_CONTAINER_ID }}
+
       - run: yarn export
 
       - name: checkout branch for publish
