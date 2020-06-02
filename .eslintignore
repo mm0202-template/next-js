@@ -3,3 +3,5 @@ public/
 .github/
 .next/
 out/
+coverage/
+cypress/integration/examples

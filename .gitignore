@@ -1,5 +1,19 @@
 .idea
 
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+cypress/integration/examples
+cypress/fixtures/example.json
+cypress/videos/
+cypress.json
+
 # Logs
 logs
 *.log
@@ -71,8 +85,8 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
-.env.test
+#.env
+#.env.test
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
