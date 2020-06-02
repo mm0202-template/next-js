@@ -6,8 +6,9 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
+    'plugin:cypress/recommended',
   ],
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'cypress'],
   parser: '@typescript-eslint/parser',
   env: {
     browser: true,
@@ -24,5 +25,6 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'cypress/no-unnecessary-waiting': 'off',
   },
 }

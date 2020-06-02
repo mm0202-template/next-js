@@ -31,7 +31,32 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - run: yarn install --frozen-lockfile
+
+      - run: yarn test
+
+      - run: yarn dev &
+      - name: 起動待機...
+        run: sleep 3
+      - run: yarn cypress run -C cypress.ci.json
+        env:
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+
       - run: yarn build
+        env:
+          NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
+          GTM_CONTAINER_ID: ${{ secrets.GTM_CONTAINER_ID }}
+
       - run: yarn export
 
       - name: Commit files
@@ -40,6 +65,6 @@ jobs:
           git add out
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "ci: Automated build push" -a | exit 0
+          git commit -m "ci: Automated build push" | exit 0
       - name: push
         run: git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" --follow-tags -f | exit 0
